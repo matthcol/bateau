@@ -22,7 +22,7 @@ public class BateauRepo {
 	
 	
 	private static final String url =
-			"jdbc:mysql://localhost:3306/bateau?serverTimezone=Europe/Paris";
+			"jdbc:mysql://localhost:3306/bateau?useSSL=false&serverTimezone=Europe/Paris";
 	private static final String user = "bat";
 	private static final String password = "password";
 	
