@@ -16,6 +16,8 @@ import javax.sql.DataSource;
 
 import org.mariadb.jdbc.MySQLDataSource;
 
+import com.mysql.cj.jdbc.MysqlDataSource;
+
 
 
 
@@ -23,13 +25,14 @@ public class BateauRepo {
 	
 	
 	private static final String url =
-			"jdbc:mysql://localhost:3306/bateau?useSSL=false&serverTimezone=Europe/Paris";
+			"jdbc:mysql://localhost:3306/bateau?serverTimezone=Europe/Paris";
 	private static final String user = "bat";
 	private static final String password = "password";
 	
 	
 	private static DataSource initDataSource() {
-		MySQLDataSource ds = new MySQLDataSource();
+		//MySQLDataSource ds = new MySQLDataSource();
+		MysqlDataSource ds = new MysqlDataSource();
 		try (
 			InputStream is = BateauRepo.class.getResourceAsStream("/config.properties");
 		) {
