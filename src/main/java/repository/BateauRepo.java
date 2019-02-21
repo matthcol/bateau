@@ -16,6 +16,8 @@ import javax.sql.DataSource;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
 
+
+
 public class BateauRepo {
 	
 	
@@ -41,6 +43,7 @@ public class BateauRepo {
 //			ds.setUser(user);
 //			ds.setPassword(password);
 		} catch (IOException e) {
+			//throw new 
 			System.err.println("Error reading configuration file: " + e.getMessage());
 		}
 		return ds;
