@@ -38,7 +38,7 @@ public class MaServlet extends HttpServlet {
 		response.getWriter()
 			.append("<div>Horloge parlante : ")
 			.append(heure.toString())
-			.append("</div><div>")
+			.append("</div><div>Bateaux : ")
 			.append(bateaux.toString())
 			.append("</div>");
 	}
