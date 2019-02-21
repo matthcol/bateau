@@ -14,7 +14,8 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import com.mysql.cj.jdbc.MysqlDataSource;
+import org.mariadb.jdbc.MySQLDataSource;
+
 
 
 
@@ -28,7 +29,7 @@ public class BateauRepo {
 	
 	
 	private static DataSource initDataSource() {
-		MysqlDataSource ds = new MysqlDataSource();
+		MySQLDataSource ds = new MySQLDataSource();
 		try (
 			InputStream is = BateauRepo.class.getResourceAsStream("/config.properties");
 		) {
