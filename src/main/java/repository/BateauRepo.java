@@ -19,7 +19,7 @@ import com.mysql.cj.jdbc.MysqlDataSource;
 public class BateauRepo {
 	
 	
-	private static final String SQL_DSN =
+	private static final String url =
 			"jdbc:mysql://localhost:3306/bateau?serverTimezone=Europe/Paris";
 	private static final String user = "bat";
 	private static final String password = "password";
@@ -37,9 +37,9 @@ public class BateauRepo {
 			ds.setUrl(props.getProperty("database.url"));
 			ds.setUser(props.getProperty("database.user"));
 			ds.setPassword(props.getProperty("database.password"));
-			//ds.setUrl(SQL_DSN);
-			//ds.setUser(user);
-			//ds.setPassword(password);
+//			ds.setUrl(url);
+//			ds.setUser(user);
+//			ds.setPassword(password);
 		} catch (IOException e) {
 			System.err.println("Error reading configuration file: " + e.getMessage());
 		}
